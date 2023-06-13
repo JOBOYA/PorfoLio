@@ -71,8 +71,8 @@ export function Navbar() {
                 </button>
             </li>
             <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-                <button onClick={() => navigateToSection('projects')} className="text-slate-50 hover:text-purple-500" >
-                    <span className="text-pink-500 mr-2">#</span>projects
+                <button onClick={() => navigateToSection('about')} className="text-slate-50 hover:text-purple-500" >
+                    <span className="text-pink-500 mr-2">#</span>a propos
                 </button>
             </li>
         </ul>

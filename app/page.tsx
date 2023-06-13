@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import Nav from '../components/NavBar';
 import Header from '../components/Header';
 import Project from '../components/Projects';
-import Skills from  '../components/skills';
+import Skills from '../components/skills';
+import Abouts from '../components/About';
+import Footer from '../components/Footers';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import './globals.css';
 
@@ -42,14 +44,18 @@ export default function Home() {
         </div>
       )}
       <Nav />
-     
-  <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
-  <div style={{ margin: '10rem' }}>
-  <Project />
-</div>
+
+      <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+      <div style={{ margin: '10rem' }}>
+        <Project />
+      </div>
 
 
-<Skills />
+      <Skills />
+
+      <Abouts />
+        
+      <Footer />
 
 
     </>

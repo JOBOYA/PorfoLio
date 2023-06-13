@@ -8,12 +8,15 @@ import {FiFigma} from 'react-icons/fi';
 export default function Skills() {
   return (
     <>
-      <h1 id="skills" className="relative left-20 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4">
-        <span className="text-pink-500">#</span>skills
-        <span style={{ position: 'absolute', left: '200px', bottom: '20px', height: '1px', width: '33.33%', backgroundColor: '#D946EF' }}></span>
-      </h1>
-      <div className="flex flex-row justify-center items-center">
-        <div className="w-1/2 flex justify-center">
+      <div id="skills" className="pl-48">
+  <h1  className="relative left-20 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4">
+    <span className="text-pink-500">#</span>Skills
+    <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '1px', width: '33.33%', backgroundColor: '#D946EF' }}></span>
+  </h1>
+</div>
+
+      <div className="flex flex-row justify-center items-center mt-14">
+        <div className="w-1/3 flex justify-center">
           <Image src="/assets/skills.png" alt="skills" width={500} height={500} />
         </div>
         <div className="flex flex-col space-x-16 justify-center items-center"> {/* Increased spacing from 8 to 16 */}
