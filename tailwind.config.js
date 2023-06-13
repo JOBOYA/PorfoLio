@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.empty-content': {
+          content: '""',
+        },
+      }
+      addUtilities(newUtilities, ['before', 'after'])
+    }
+  ],
 }

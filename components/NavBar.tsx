@@ -1,9 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-
+//TODO add responsive navbar and transition 
 export function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -42,22 +41,39 @@ export function Navbar() {
         }
     }, [isOpen, isMobile]);
 
+
+    const navigateToSection = (sectionId: string) => {
+        if (window.location.pathname === '/') {
+            const sectionElement = document.getElementById(sectionId);
+            if (sectionElement) {
+                sectionElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = `/#${sectionId}`;
+        }
+    };
+
     const menuItems = (
         <ul className={isMobile ? "space-y-4" : "space-x-4"}>
             <li className={`${(showHome || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-                <Link className="text-slate-50 hover:text-purple-500" href="/">
-                    <span className="text-pink-500 mr-2">#</span>Home
-                </Link>
+                <button onClick={() => navigateToSection('/')} className="text-slate-50 hover:text-purple-500" >
+                    <span className="text-pink-500 mr-2">#</span>accueil
+                </button>
             </li>
             <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-                <Link className="text-slate-50 hover:text-purple-500" href="/about">
-                    <span className="text-pink-500 mr-2">#</span>About
-                </Link>
+                <button onClick={() => navigateToSection('projects')} className="text-slate-50 hover:text-purple-500" >
+                    <span className="text-pink-500 mr-2">#</span>projects
+                </button>
+            </li>
+            <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+            <button onClick={() => navigateToSection('skills')} className="text-slate-50 hover:text-purple-500" >
+                    <span className="text-pink-500 mr-2">#</span>skills
+                </button>
             </li>
             <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-                <Link className="text-slate-50 hover:text-purple-500" href="/contact">
-                    <span className="text-pink-500 mr-2">#</span>Contact
-                </Link>
+                <button onClick={() => navigateToSection('projects')} className="text-slate-50 hover:text-purple-500" >
+                    <span className="text-pink-500 mr-2">#</span>projects
+                </button>
             </li>
         </ul>
     );
@@ -79,9 +95,7 @@ export function Navbar() {
                     menuItems
                 )}
             </nav>
-            <header className="flex justify-center items-center py-12">
-                {/* Votre contenu de l'en-tête */}
-            </header>
+           
         </>
     );
 }

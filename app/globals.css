@@ -8,5 +8,8 @@
 body {
   background-color: #2a3136;
   font-family: 'Fira Code', monospace;
+  overflow-x: hidden;
   
 }
+
+
