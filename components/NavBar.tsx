@@ -2,13 +2,20 @@
 
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-//TODO add responsive navbar and transition 
+//TODO  add animation hover navlink
+
 export function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [showHome, setShowHome] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const [showContact, setShowContact] = useState(false);
+    
+    const [blur, setBlur] = useState(false);  // New state
+
+   
+
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -41,6 +48,19 @@ export function Navbar() {
         }
     }, [isOpen, isMobile]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 50;
+            if (show !== blur) {
+                setBlur(show);
+            }
+        };
+
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        };
+    }, [blur]);
 
     const navigateToSection = (sectionId: string) => {
         if (window.location.pathname === '/') {
@@ -56,23 +76,27 @@ export function Navbar() {
     const menuItems = (
         <ul className={isMobile ? "space-y-4" : "space-x-4"}>
             <li className={`${(showHome || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+           
                 <button onClick={() => navigateToSection('/')} className="text-slate-50 hover:text-purple-500" >
                     <span className="text-pink-500 mr-2">#</span>accueil
+                    
                 </button>
             </li>
+            
             <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
                 <button onClick={() => navigateToSection('projects')} className="text-slate-50 hover:text-purple-500" >
                     <span className="text-pink-500 mr-2">#</span>projects
                 </button>
             </li>
             <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-            <button onClick={() => navigateToSection('skills')} className="text-slate-50 hover:text-purple-500" >
+                <button onClick={() => navigateToSection('skills')} className="text-slate-50 hover:text-purple-500" >
                     <span className="text-pink-500 mr-2">#</span>skills
                 </button>
             </li>
             <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
                 <button onClick={() => navigateToSection('about')} className="text-slate-50 hover:text-purple-500" >
                     <span className="text-pink-500 mr-2">#</span>a propos
+                  
                 </button>
             </li>
         </ul>
@@ -80,7 +104,12 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="relative flex justify-end py-8 pr-40">
+            <nav
+                className={`flex justify-end py-8 pr-40 sticky top-0 bg-transparent ${blur ? 'backdrop-blur' : ''}`}
+                style={{ zIndex: 1000 }} // ensure navbar is at the top layer
+            >
+
+
                 {isMobile ? (
                     <>
                         <button
@@ -95,7 +124,7 @@ export function Navbar() {
                     menuItems
                 )}
             </nav>
-           
+
         </>
     );
 }

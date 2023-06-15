@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
     return (
-        <div className="flex flex-col items-start md:flex-row md:items-center p-12 mt- mx-auto px-2 md:px-4 max-w-screen-lg">
+        <div className="flex flex-col items-start md:flex-row md:items-center p-12 mt-28 md:mt-0 mx-auto px-2 md:px-4 max-w-screen-lg">
             {/* Image */}
             <h1 className="text-4xl font-bold mb-4 md:mb-0 md:mr-4">
                 👨‍💻
