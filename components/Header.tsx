@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-
+import { Typewriter } from 'react-simple-typewriter'
+//TODO add animation header and text
 interface HeaderProps {
     text: string;
     imageUrl: string;
@@ -25,22 +26,26 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                 <div className="w-24 h-24 md:w-32 md:h-32 relative self-end md:self-auto ml-auto">
                     <Image src={imageUrl} layout="fill" className="rounded-full" alt="Profile Picture" />
                 </div>
-
-
             </div>
             <div className="mt-4 md:mt-0 md:ml-4">
-                <div className="py-8 border-y-4 px-4 border border-purple-500 rounded">
-                    <p className="text-white font-bold">“Un code supprimé est un code débogué.”</p>
+                <div style={{width: '250px', height: '105px'}} className="py-8 border-y-4 px-4 border border-purple-500 rounded">
+                    <span style={{ color: 'white', fontWeight: 'bold' }}>
+                        <Typewriter
+                            words={['“Un code supprimé est un code débogué.”', '“Un autre proverbe cool.”', '“Et un dernier pour la route.”']}
+                            loop={5}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
                 </div>
             </div>
             <div className="absolute right-0 border border-purple-500 half-border rounded p-12 mt-80">
 
             </div>
-
         </div>
-
-
-
     );
 };
 
