@@ -13,9 +13,9 @@ const Projects = () => {
 
     return (
         <div
-            className="relative flex flex-col items-center justify-center p-5 border-2 border-gray-200 rounded-xl shadow-lg space-y-4"
-            style={{ width: '100%', height: '100vh' }}
-        >
+        className="relative flex flex-col items-center justify-center p-5 border-2 md:border-0 rounded-xl shadow-lg space-y-4"
+        style={{ width: '100%', height: '100vh' }}
+    >
             <Image
                 src="/assets/background.svg"
                 alt='git'

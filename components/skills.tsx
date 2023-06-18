@@ -4,7 +4,6 @@ import { SiTypescript } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
 import { FiFigma } from 'react-icons/fi';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
-//TODO add responsive card and disposition of the skills
 
 export default function Skills() {
   const { scrollYProgress } = useViewportScroll();
@@ -12,20 +11,19 @@ export default function Skills() {
 
   return (
     <>
-
-      <div id="skills" className="pl-48">
-        <h1 className="relative left-20 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4">
+      <div id="skills" className="pl-4 md:pl-48 items-center">
+        <h1 className="relative left-4 md:left-20 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4">
           <span className="text-pink-500">#</span>Skills
           <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '1px', width: '33.33%', backgroundColor: '#D946EF' }}></span>
         </h1>
       </div>
 
-      <div className="flex flex-row justify-center items-center mt-14">
-        <div className="w-1/3 flex justify-center">
-          <Image src="/assets/skills.png" alt="skills" width={500} height={500} />
+      <div className="flex flex-col md:flex-row justify-evenly items-center mt-14">
+        <div className="w-full md:w-1/3 flex justify-center">
+          <Image src="/assets/skills.png" alt="skills" width={500} height={500} className="rounded-full" />
         </div>
-        <motion.div style={{ scale }}>
-          <div className="flex flex-col space-x-16 justify-center items-center"> {/* Increased spacing from 8 to 16 */}
+        <motion.div style={{ scale }} className="w-full md:w-2/3 justify-evenly">
+          <div className="flex flex-col space-y-16 md:space-y-0 md:space-x-16 justify-center items-center md:flex-row">
             <div className="border-2 border-pink-500 rounded-md p-4">
               <h1 className="text-white text-2xl font-bold">Languages</h1>
               <ul className="list-disc list-inside text-white text-lg pl-5">
@@ -54,8 +52,6 @@ export default function Skills() {
           </div>
         </motion.div>
       </div>
-
-
     </>
   );
 }
