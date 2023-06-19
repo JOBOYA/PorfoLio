@@ -67,3 +67,33 @@ body {
     max-width: 100%;
   }
 }
+
+.loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.animate-arrow {
+  animation: arrow-animation 1s ease-in-out infinite;
+}
+
+.flipped-arrow {
+  transform: rotate(180deg);
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: rotate(180deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(10px); /* positive value moves the element downwards */
+  }
+  100% {
+    transform: rotate(180deg) translateY(0);
+  } 
+}
+
+

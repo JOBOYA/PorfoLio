@@ -1,4 +1,5 @@
 'use client'
+import { Loading } from "@nextui-org/react";
 import { useState, useEffect } from 'react';
 import Nav from '../components/NavBar';
 import Header from '../components/Header';
@@ -12,6 +13,7 @@ import { motion } from 'framer-motion';
 import './globals.css';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(true);
 
@@ -46,51 +48,64 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    // Simulate a 2 second loading time
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      {!isMobile && (
+      {isLoading ? (
+        <div className="loading-container">
+          <Loading style={{ textIndent: '-9999px' }}>Loading</Loading>
+        </div>
+      ) : (
         <>
-          <motion.div className="absolute flex flex-col items-start ml-12"
-            initial="hidden"
-            animate={isIconsVisible ? "visible" : "hidden"}
-            variants={iconVariants}
-            transition={{ ease: "easeInOut", duration: 1 }}
-          >
-            <div className="h-60 w-0.5 bg-gray-400"></div>
-            <div className="flex flex-col items-start space-y-4 ml-[-14px] py-3">
-              <FaGithub className="text-white transition-transform hover:scale-110" size={30} />
-              <FaLinkedin className="text-white transition-transform hover:scale-110" size={30} />
-              <div className="flex items-center">
-                <FaTwitter className="text-white transition-transform hover:scale-110" size={30} />
-                <MdClose onClick={toggleIconsVisibility} className="text-white ml-3 cursor-pointer" size={30} />
-               
-             
-              </div>
-            </div>
-          </motion.div>
-          {!isIconsVisible && (
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              transition={{ ease: "easeInOut", duration: 1 }}
-              className="absolute flex flex-col items-start ml-12 mb-10 py-16"
-            >
-              <div onClick={toggleIconsVisibility} className="cursor-pointer">
-                <MdArrowUpward className="text-white transform rotate-180" size={40} />
-              </div>
-            </motion.div>
+          {!isMobile && (
+            <>
+              <motion.div className="absolute flex flex-col items-start ml-12"
+                initial="hidden"
+                animate={isIconsVisible ? "visible" : "hidden"}
+                variants={iconVariants}
+                transition={{ ease: "easeInOut", duration: 1 }}
+              >
+                <div className="h-60 w-0.5 bg-gray-400"></div>
+                <div className="flex flex-col items-start space-y-4 ml-[-14px] py-3">
+                  <FaGithub className="text-white transition-transform hover:scale-110" size={30} />
+                  <FaLinkedin className="text-white transition-transform hover:scale-110" size={30} />
+                  <div className="flex items-center">
+                    <FaTwitter className="text-white transition-transform hover:scale-110" size={30} />
+                    <MdClose onClick={toggleIconsVisibility} className="text-white ml-3 cursor-pointer" size={30} />
+                  </div>
+                </div>
+              </motion.div>
+              {!isIconsVisible && (
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ ease: "easeInOut", duration: 1 }}
+                  className="absolute flex flex-col items-start ml-12 mb-10 py-16"
+                >
+                  <div onClick={toggleIconsVisibility} className="cursor-pointer">
+                    <MdArrowUpward className="text-white transform rotate-180 flipped-arrow animate-arrow" size={40} />
+                  </div>
+                </motion.div>
+              )}
+            </>
           )}
+          <Nav />
+          <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+          <div style={{ margin: '10rem' }}>
+            <Project />
+          </div>
+          <Skills />
+          <Abouts />
+          <Footer />
         </>
       )}
-      <Nav />
-      <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
-      <div style={{ margin: '10rem' }}>
-        <Project />
-      </div>
-      <Skills />
-      <Abouts />
-      <Footer />
     </>
   )
 }
