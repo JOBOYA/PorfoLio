@@ -102,7 +102,9 @@ export default function Home() {
             <Project />
           </div>
           <Skills />
+          <div className="mr-8 mb-12">
           <Abouts />
+          </div>
           <Footer />
         </>
       )}
