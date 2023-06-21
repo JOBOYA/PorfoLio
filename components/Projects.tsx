@@ -14,7 +14,7 @@ const Projects = () => {
         <>
 
 <div className="section-container">
-            <div id="skills" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-12">
+            <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-12">
                 <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
                     <span className="text-pink-500">#</span>Projets
                     <span className="line" style={{ position: 'absolute', left: '180px', bottom: '20px', height: '1px', width: '60%', backgroundColor: '#D946EF' }}></span>
