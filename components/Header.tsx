@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                     </span>
                 </div>
             </div>
-            <div className="absolute right-0 border border-purple-500 half-border rounded p-12 mt-80">
+            <div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 mt-80">
 
             </div>
         </div>

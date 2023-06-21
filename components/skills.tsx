@@ -12,17 +12,17 @@ export default function Skills() {
   return (
     <>
      <div className="section-container">
-    <div id="skills" className="pl-4 md:pl-72 items-center">
-        <h1 className="relative right-4 md:right-16 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4"> {/* Ajustez la valeur ici */}
+    <div id="skills" className="pl-12 md:pl-72 items-center mx-4 sm:mx-0">
+        <h1 className="relative right-8 md:right-28 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 "> 
             <span className="text-pink-500">#</span>Skills
             <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '1px', width: '60.33%', backgroundColor: '#D946EF' }}></span>
         </h1>
     </div>
 
 
-      <div className="flex flex-col md:flex-row justify-evenly items-center mt-14">
-        <div className="w-full md:w-1/3 flex justify-center">
-          <Image src="/assets/skills.png" alt="skills" width={500} height={500} className="rounded-full" />
+      <div className="flex flex-col md:flex-row justify-evenly items-center mt-14 mx-4 sm:mx-0">
+        <div className="w-full md:w-1/3 flex justify-center ">
+          <Image src="/assets/skills.png" alt="skills" width={500} height={500} className="rounded-full " />
         </div>
         <motion.div style={{ scale }} className="w-full md:w-2/3 justify-evenly">
           <div className="flex flex-col space-y-16 md:space-y-0 md:space-x-16 justify-center items-center md:flex-row">

@@ -9,6 +9,7 @@ body {
   background-color: #2a3136;
   font-family: 'Fira Code', monospace;
   overflow-x: hidden;
+ 
 
   
 }
@@ -136,4 +137,33 @@ button:hover .waviy {
 }
 
 
+@media (max-width: 768px) {
+  .border_mobile {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 1009px) {
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 2rem;
+  }
+  .line {
+   display: none;
+  }
+}
+
+
+  @media screen and (max-width: 768px) {
+    .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25vh;
+      font-size: 2rem;
+    }
+  }
+  

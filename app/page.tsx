@@ -101,7 +101,9 @@ export default function Home() {
           <div style={{ margin: '10rem' }}>
             <Project />
           </div>
+          
           <Skills />
+          
           <div className="mr-8 mb-12">
           <Abouts />
           </div>
