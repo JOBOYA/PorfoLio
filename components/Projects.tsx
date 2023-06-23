@@ -2,24 +2,27 @@ import { Grid, Card } from "@nextui-org/react";
 import Image from "next/image";
 import Tilt from 'react-parallax-tilt';
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { AiFillGithub } from "react-icons/ai";
+import Link from "next/link";
+
 
 
 const Projects = () => {
     // Utilisation de useViewportScroll et useTransform pour créer l'effet d'échelle basé sur le défilement
     const { scrollYProgress } = useViewportScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1.5]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1.2]);
 
 
     return (
         <>
 
-<div className="section-container">
-            <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-12">
-                <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
-                    <span className="text-pink-500">#</span>Projets
-                    <span className="line" style={{ position: 'absolute', left: '180px', bottom: '20px', height: '1px', width: '60%', backgroundColor: '#D946EF' }}></span>
-                </h1>
-            </div>
+            <div className="section-container">
+                <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-12">
+                    <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
+                        <span className="text-pink-500">#</span>Projets
+                        <span className="line" style={{ position: 'absolute', left: '180px', bottom: '20px', height: '1px', width: '60%', backgroundColor: '#D946EF' }}></span>
+                    </h1>
+                </div>
 
                 <div
                     className="relative flex flex-col items-center justify-center p-5 border-0 md:border-0 rounded-xl shadow-lg space-y-4"
@@ -43,9 +46,25 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
+                                        <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/yourusername">
+                                                    <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">Restaurant &quot;Le Quai Antique&quot;</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/html.png" width={24} height={24} alt="html" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/css.png" width={24} height={24} alt="css" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/javascript.png" width={24} height={24} alt="js" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/php.png" width={24} height={24} alt="php" className="h-6 ml-2" />
+                                                </div>
+                                            </div>
 
-                                        <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4">
-                                            <Image src="/assets/joseph1.png" alt='git' width={300} height={300} />
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/antiques.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
                                         </Card>
 
 
@@ -62,9 +81,29 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
-                                        <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4">
-                                            <Image src="/assets/joseph1.png" alt='git' width={300} height={300} />
+                                        <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/yourusername">
+                                                    <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">KOLIFLUX</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/reactjs.png" width={24} height={24} alt="html" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/typescript.png" width={24} height={24} alt="css" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/css.png" width={24} height={24} alt="js" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/nodejs.png" width={24} height={24} alt="php" className="h-6 ml-2" />
+                                                </div>
+                                            </div>
+
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/koli.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
                                         </Card>
+
+
+
                                     </motion.div>
                                 </Grid>
                             </Tilt>
@@ -77,9 +116,26 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
-                                        <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4">
-                                            <Image src="/assets/joseph1.png" alt='git' width={300} height={300} />
+                                        <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/yourusername">
+                                                    <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">Charles Cantin</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/vercel.png" width={24} height={24} alt="html" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/tailwind.png" width={24} height={24} alt="css" className="h-6 ml-2" />
+
+                                                </div>
+                                            </div>
+
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/photo.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
                                         </Card>
+
                                     </motion.div>
                                 </Grid>
                             </Tilt>
@@ -100,16 +156,32 @@ const Projects = () => {
                                         height: "300px",
                                         "@media screen and (max-width: 768px)": {
                                             width: "60vw",
-                                            height:"20vh"  // ajuster la largeur ici pour qu'elle corresponde aux autres cartes en vue mobile
+                                            height: "20vh"  // ajuster la largeur ici pour qu'elle corresponde aux autres cartes en vue mobile
                                         },
                                     }} className="grid grid-rows-4 grid-flow-col gap-4">
-                                        <Image
-                                            src="/assets/joseph1.png"
-                                            alt='git'
-                                            layout="responsive"
-                                            width={300}
-                                            height={300}
-                                        />
+                                        <div className="absolute top-0 right-0 p-2 z-10">
+
+                                            <Link href="https://github.com/yourusername">
+                                                <AiFillGithub className="text-gray-500 hover:text-black text-2xl" />
+                                            </Link>
+
+                                        </div>
+                                        <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                            <span className="text-white text-sm">BFsimulateur</span>
+                                            <div className="flex justify-center mt-1">
+                                                <Image src="/media/tech/reactjs.png" width={24} height={24} alt="html" className="h-6 ml-2" />
+                                                <Image src="/media/tech/typescript.png" width={24} height={24} alt="css" className="h-6 ml-2" />
+                                                <Image src="/media/tech/css.png" width={24} height={24} alt="js" className="h-6 ml-2" />
+                                                <Image src="/media/tech/tailwind.png" width={24} height={24} alt="php" className="h-6 ml-2" />
+                                                <Image src="/media/tech/nodejs.png" width={24} height={24} alt="php" className="h-6 ml-2" />
+
+                                            </div>
+                                        </div>
+
+                                        <div className="absolute w-full h-full">
+                                            <Image src="/assets/simulateur.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
+                                        </div>
+
                                     </Card>
                                 </motion.div>
                             </Grid>

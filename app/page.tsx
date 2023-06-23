@@ -36,6 +36,7 @@ export default function Home() {
   }
 
   const toggleIconsVisibility = () => {
+    console.log('toggleIconsVisibility called');
     setIsIconsVisible(!isIconsVisible);
   }
 
@@ -59,7 +60,7 @@ export default function Home() {
     <>
       {isLoading ? (
         <div className="loading-container">
-          <Loading style={{ textIndent: '-9999px' }}>Loading</Loading>
+          <Loading style={{ textIndent: '-9999px' }}></Loading>
         </div>
       ) : (
         <>
@@ -77,7 +78,7 @@ export default function Home() {
                   <FaLinkedin className="text-white transition-transform hover:scale-110" size={30} />
                   <div className="flex items-center">
                     <FaTwitter className="text-white transition-transform hover:scale-110" size={30} />
-                    <MdClose onClick={toggleIconsVisibility} className="text-white ml-3 cursor-pointer" size={30} />
+                    <MdClose onClick={toggleIconsVisibility} className="text-white ml-3 cursor-pointer z-10" size={30} />
                   </div>
                 </div>
               </motion.div>
@@ -89,24 +90,28 @@ export default function Home() {
                   transition={{ ease: "easeInOut", duration: 1 }}
                   className="absolute flex flex-col items-start ml-12 mb-10 py-16"
                 >
-                  <div onClick={toggleIconsVisibility} className="cursor-pointer">
-                    <MdArrowUpward className="text-white transform rotate-180 flipped-arrow animate-arrow" size={40} />
+                  <div onClick={toggleIconsVisibility} className="cursor-pointer mt-4">
+                    <MdArrowUpward className="text-white transform rotate-180 flipped-arrow animate-arrow z-10" size={40} />
                   </div>
+
                 </motion.div>
               )}
             </>
           )}
           <Nav />
-          <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+          <div className="m-12">
+            <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+          </div>
+          <div className="mr-8 mb-12">
+            <Abouts />
+          </div>
           <div style={{ margin: '10rem' }}>
             <Project />
           </div>
-          
+
           <Skills />
-          
-          <div className="mr-8 mb-12">
-          <Abouts />
-          </div>
+
+
           <Footer />
         </>
       )}
