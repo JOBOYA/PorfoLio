@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa'; // Import FontAwesome icons
+import { FaHtml5, FaCss3Alt, FaJs, FaReact} from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
 import { FiFigma } from 'react-icons/fi';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { FaTrello, FaGithub } from 'react-icons/fa';
+
 
 export default function Skills() {
   const { scrollYProgress } = useViewportScroll();
@@ -39,6 +41,7 @@ export default function Skills() {
               <h1 className="text-white text-2xl font-bold">Frameworks</h1>
               <ul className="list-disc list-inside text-white text-lg pl-5">
                 <li className="flex items-center"><FaReact className="mr-2" />React</li>
+             
 
               </ul>
             </div>
@@ -47,6 +50,10 @@ export default function Skills() {
               <ul className="list-disc list-inside text-white text-lg pl-5">
                 <li className="flex items-center"><TbBrandVscode className="mr-2" />Vscode</li>
                 <li className="flex items-center"><FiFigma className="mr-2" />Figma</li>
+                <li className="flex items-center"><FaTrello className="mr-2" />Trello</li>
+                <li className="flex items-center"><FaGithub className="mr-2" />Github</li>
+                
+
 
               </ul>
             </div>

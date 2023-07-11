@@ -48,7 +48,7 @@ const Projects = () => {
                                     >
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
-                                                <Link href="https://github.com/yourusername">
+                                                <Link href="https://github.com/JOBOYA/Le_Quai_Antique" target="_blank">
                                                     <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
                                                 </Link>
                                             </div>
@@ -83,7 +83,7 @@ const Projects = () => {
                                     >
                                         <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
-                                                <Link href="https://github.com/yourusername">
+                                                <Link href="https://github.com/JOBOYA/KOLI-FLUX" target="_blank">
                                                     <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
                                                 </Link>
                                             </div>
@@ -118,7 +118,7 @@ const Projects = () => {
                                     >
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
-                                                <Link href="https://github.com/yourusername">
+                                                <Link href="https://github.com/JOBOYA/CharlesCantin" target="_blank">
                                                     <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
                                                 </Link>
                                             </div>
@@ -141,7 +141,40 @@ const Projects = () => {
                             </Tilt>
                         </Grid.Container>
 
+                        <Tilt>
+                                <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 1 }}
+                                        style={{ scale }}
+                                    >
+                                        <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/JOBOYA/TodoAI" target="_blank">
+                                                    <AiFillGithub className="text-gray-500 hover:text-white text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">KanaBan AI</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/vite.png" width={24} height={24} alt="html" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/typescript.png" width={24} height={24} alt="css" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/tailwind.png" width={24} height={24} alt="js" className="h-6 ml-2" />
+                                                    
+                                                </div>
+                                            </div>
 
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/kanban.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
+                                        </Card>
+
+
+
+                                    </motion.div>
+                                </Grid>
+                            </Tilt>
 
                         <Tilt>
                             <Grid xs={24} sm={12} md={8} lg={8} xl={8} justify="center" alignItems="center" className="projects__left">
@@ -161,7 +194,7 @@ const Projects = () => {
                                     }} className="grid grid-rows-4 grid-flow-col gap-4">
                                         <div className="absolute top-0 right-0 p-2 z-10">
 
-                                            <Link href="https://github.com/yourusername">
+                                            <Link href="https://github.com/JOBOYA/CopieFreelance" target="_blank">
                                                 <AiFillGithub className="text-gray-500 hover:text-black text-2xl" />
                                             </Link>
 
@@ -186,6 +219,10 @@ const Projects = () => {
                                 </motion.div>
                             </Grid>
                         </Tilt>
+                       
+
+                     
+                       
                     </Grid.Container>
                 </div>
             </div>
