@@ -4,7 +4,7 @@ import { useSpring, animated } from '@react-spring/web'
 
 
 interface WaterTextProps {
-    text: string;
+  text: string;
 }
 
 const AnimFeTurbulence = animated('feTurbulence')
@@ -23,7 +23,7 @@ export default function WaterText({ text }: WaterTextProps) {
   )
 
   return (
-    <div  onClick={() => toggle(!open)}>
+    <div onClick={() => toggle(!open)}>
       <animated.svg style={{ scale, opacity }} viewBox="0 0 2000 446">
 
         <defs>
@@ -40,9 +40,9 @@ export default function WaterText({ text }: WaterTextProps) {
           </filter>
         </defs>
         <g filter="url(#water)">
-            <div className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
-          <text fill="lightblue" >{text}</text>
-            </div>
+          <div className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
+            <text fill="lightblue" >{text}</text>
+          </div>
         </g>
       </animated.svg>
     </div>

@@ -113,7 +113,7 @@ export function Navbar() {
             <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
             <button onClick={() => navigateToSection('about')} className="text-slate-50 hover:text-purple-500">
     <span className="text-pink-500 mr-2">#</span>
-    {Array.from('a\xa0propos').map((letter, index) => (
+    {Array.from('à\xa0propos').map((letter, index) => (
         <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
             {letter}
         </span>

@@ -133,7 +133,13 @@ button:hover .waviy {
 
 .section-container {
   max-width: 1200px; 
-  margin: auto;      
+  margin: auto;   
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    margin-bottom: 23rem;
+  }
 }
 
 
@@ -167,4 +173,3 @@ button:hover .waviy {
     }
   }
   
- 

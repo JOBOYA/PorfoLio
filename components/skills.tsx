@@ -24,7 +24,7 @@ export default function Skills() {
 
       <div className="flex flex-col md:flex-row justify-evenly items-center mt-14 mx-4 sm:mx-0">
         <div className="w-full md:w-1/3 flex justify-center ">
-          <Image src="/assets/skills.png" alt="skills" width={500} height={500} className="rounded-full " />
+          <Image src="/assets/skills.png" alt="skills" width={500} height={500} className="rounded-full md:block hidden" />
         </div>
         <motion.div style={{ scale }} className="w-full md:w-2/3 justify-evenly">
           <div className="flex flex-col space-y-16 md:space-y-0 md:space-x-16 justify-center items-center md:flex-row">

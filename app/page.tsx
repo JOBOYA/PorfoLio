@@ -11,6 +11,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdClose, MdArrowUpward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import './globals.css';
+import Link from "next/link";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -74,10 +75,17 @@ export default function Home() {
               >
                 <div className="h-60 w-0.5 bg-gray-400"></div>
                 <div className="flex flex-col items-start space-y-4 ml-[-14px] py-3">
+                  <Link href="https://github.com/JOBOYA" target="_blank">
                   <FaGithub className="text-white transition-transform hover:scale-110" size={30} />
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/joseph-boyadjian-638b83255/" target="_blank">
                   <FaLinkedin className="text-white transition-transform hover:scale-110" size={30} />
+                  </Link>
+                 
                   <div className="flex items-center">
+                  <Link href="https://twitter.com/HOVSEPBOYA" target="_blank">
                     <FaTwitter className="text-white transition-transform hover:scale-110" size={30} />
+                    </Link>
                     <MdClose onClick={toggleIconsVisibility} className="text-white ml-3 cursor-pointer z-10" size={30} />
                   </div>
                 </div>
@@ -110,6 +118,8 @@ export default function Home() {
           </div>
 
           <Skills />
+        
+         
 
 
           <Footer />

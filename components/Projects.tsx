@@ -15,7 +15,10 @@ const Projects = () => {
 
     return (
         <>
-
+ <div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
+</div>
+<div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
+</div>
             <div className="section-container">
                 <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-12">
                     <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
@@ -46,6 +49,7 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
+                                        <Link href="https://lequaiantique.000webhostapp.com/" target="_blank">
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
                                                 <Link href="https://github.com/JOBOYA/Le_Quai_Antique" target="_blank">
@@ -66,6 +70,7 @@ const Projects = () => {
                                                 <Image src="/assets/antiques.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
                                             </div>
                                         </Card>
+                                        </Link>
 
 
 
@@ -81,6 +86,7 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
+                                        <Link href="https://taupe-hummingbird-5f0d47.netlify.app/" target="_blank">
                                         <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
                                                 <Link href="https://github.com/JOBOYA/KOLI-FLUX" target="_blank">
@@ -101,6 +107,7 @@ const Projects = () => {
                                                 <Image src="/assets/koli.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
                                             </div>
                                         </Card>
+                                        </Link>
 
 
 
@@ -116,6 +123,7 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
+                                        <Link href="https://celadon-eclair-1703ea.netlify.app/" target="_blank">
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
                                                 <Link href="https://github.com/JOBOYA/CharlesCantin" target="_blank">
@@ -135,6 +143,7 @@ const Projects = () => {
                                                 <Image src="/assets/photo.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
                                             </div>
                                         </Card>
+                                        </Link>
 
                                     </motion.div>
                                 </Grid>
@@ -149,6 +158,7 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
+                                        <Link href="https://tangerine-brioche-38768e.netlify.app/" target="_blank">
                                         <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
                                                 <Link href="https://github.com/JOBOYA/TodoAI" target="_blank">
@@ -169,6 +179,7 @@ const Projects = () => {
                                                 <Image src="/assets/kanban.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
                                             </div>
                                         </Card>
+                                        </Link>
 
 
 
@@ -184,6 +195,7 @@ const Projects = () => {
                                     transition={{ duration: 1 }}
                                     style={{ scale }}
                                 >
+                                    <Link href="https://maformejuridique.fr/" target="_blank">
                                     <Card css={{
                                         width: "600px",  // ajuster la largeur ici pour qu'elle corresponde aux autres cartes
                                         height: "300px",
@@ -216,6 +228,7 @@ const Projects = () => {
                                         </div>
 
                                     </Card>
+                                    </Link>
                                 </motion.div>
                             </Grid>
                         </Tilt>
@@ -226,6 +239,10 @@ const Projects = () => {
                     </Grid.Container>
                 </div>
             </div>
+            <div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
+</div>
+<div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
+</div>
         </>
     )
 }
