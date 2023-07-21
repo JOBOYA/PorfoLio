@@ -105,9 +105,23 @@ body {
   font-size: 20px;
 }
 
+
+
 button:hover .waviy {
   animation: waviy 3s infinite;
 }
+
+.blur-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  z-index: 900; 
+}
+
+
 
 
 
@@ -138,7 +152,7 @@ button:hover .waviy {
 
 @media (max-width: 768px) {
   .section-container {
-    margin-bottom: 23rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -173,3 +187,4 @@ button:hover .waviy {
     }
   }
   
+

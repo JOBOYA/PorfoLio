@@ -8,6 +8,8 @@ interface HeaderProps {
     imageUrl: string;
 }
 
+
+//TODO changer les phrases dans le cadre
 const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
     return (
         <motion.div
@@ -33,20 +35,24 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                         <Image src={imageUrl} layout="fill" className="rounded-full" alt="Profile Picture" />
                     </div>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-4">
-                    <div style={{width: '250px', height: '105px'}} className="py-8 border-y-4 px-4 border border-purple-500 rounded">
-                        <span style={{ color: 'white', fontWeight: 'bold' }}>
-                            <Typewriter
-                                words={['“Un code supprimé est un code débogué.”', '“Un autre proverbe cool.”', '“Et un dernier pour la route.”']}
-                                loop={5}
-                                cursor
-                                cursorStyle='_'
-                                typeSpeed={70}
-                                deleteSpeed={50}
-                                delaySpeed={1000}
-                            />
-                        </span>
-                    </div>
+                <div style={{width: '250px', height: '150px', overflowX: 'auto'}} className="py-8 border-y-4 px-4 border border-purple-500 rounded">
+    <span style={{ color: 'white', fontWeight: 'bold' }}>
+        <Typewriter
+            words={[
+                "Élaguer un code, c'est tailler une branche sur l'arbre de Git.",
+                "Un commit supplémentaire, c'est une nouvelle épice dans le plat du code.",
+                "Une pull request, c'est le plat final prêt à être dégusté."
+            ]}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+        />
+    </span>
+
+
                 </div>
               
             </div>

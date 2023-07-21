@@ -110,19 +110,22 @@ export default function Home() {
           <div className="m-12">
             <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
           </div>
-          <div className="mr-8 mb-12">
+          <div className="mr-8  mb-12">
             <Abouts />
           </div>
-          <div style={{ margin: '10rem' }}>
+          <div style={{ marginBottom: '20rem' }}>
             <Project />
           </div>
 
+          <div className="mb-20">
           <Skills />
+          </div>
         
          
 
 
           <Footer />
+          
         </>
       )}
     </>

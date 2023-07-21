@@ -33,19 +33,19 @@ export default function Footer() {
   return (
     <footer className="flex items-center justify-center border bg-transparent text-white p-4 sm:p-6 space-x-4 rounded-xl max-w-6xl mx-4 sm:mx-auto mb-8">
       <div className="flex space-x-4">
-        <motion.a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+        <motion.a href="https://github.com/JOBOYA" target="_blank" rel="noopener noreferrer"
           initial={{ x: -200 }}
           animate={controls}
         >
           <FaGithub className="text-white transition-transform hover:scale-110" size={30} />
         </motion.a>
-        <motion.a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener noreferrer"
+        <motion.a href="https://www.linkedin.com/in/joseph-boyadjian-638b83255/" target="_blank" rel="noopener noreferrer"
           initial={{ x: -200 }}
           animate={controls}
         >
           <FaLinkedin className="text-white transition-transform hover:scale-110" size={30} />
         </motion.a>
-        <motion.a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"
+        <motion.a href="https://twitter.com/HOVSEPBOYA" target="_blank" rel="noopener noreferrer"
           initial={{ x: -200 }}
           animate={controls}
         >

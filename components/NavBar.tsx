@@ -10,10 +10,10 @@ export function Navbar() {
     const [showHome, setShowHome] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const [showContact, setShowContact] = useState(false);
-    
+
     const [blur, setBlur] = useState(false);  // New state
 
-   
+
 
 
 
@@ -71,54 +71,59 @@ export function Navbar() {
         } else {
             window.location.href = `/#${sectionId}`;
         }
+        setIsOpen(false);
     };
 
     const menuItems = (
         <ul className={isMobile ? "space-y-4" : "space-x-4"}>
             <li className={`${(showHome || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-           
-            <button onClick={() => navigateToSection('/')} className="text-slate-50 hover:text-purple-500">
-    <span className="text-pink-500 mr-2">#</span>
-    {Array.from('accueil').map((letter, index) => (
-        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
-            {letter}
-        </span>
-    ))}
-</button>
+
+                <button onClick={() => navigateToSection('/')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+
+                    <span className="text-pink-500 mr-2">#</span>
+                    {Array.from('accueil').map((letter, index) => (
+                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                            {letter}
+                        </span>
+                    ))}
+                </button>
 
 
 
             </li>
-            
+
             <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-            <button onClick={() => navigateToSection('projects')} className="text-slate-50 hover:text-purple-500">
-    <span className="text-pink-500 mr-2">#</span>
-    {Array.from('projets').map((letter, index) => (
-        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
-            {letter}
-        </span>
-    ))}
-</button>
+                <button onClick={() => navigateToSection('projects')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+
+                    <span className="text-pink-500 mr-2">#</span>
+                    {Array.from('projets').map((letter, index) => (
+                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                            {letter}
+                        </span>
+                    ))}
+                </button>
             </li>
             <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-            <button onClick={() => navigateToSection('skills')} className="text-slate-50 hover:text-purple-500">
-    <span className="text-pink-500 mr-2">#</span>
-    {Array.from('skills').map((letter, index) => (
-        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
-            {letter}
-        </span>
-    ))}
-</button>
+                <button onClick={() => navigateToSection('skills')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+
+                    <span className="text-pink-500 mr-2">#</span>
+                    {Array.from('skills').map((letter, index) => (
+                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                            {letter}
+                        </span>
+                    ))}
+                </button>
             </li>
             <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
-            <button onClick={() => navigateToSection('about')} className="text-slate-50 hover:text-purple-500">
-    <span className="text-pink-500 mr-2">#</span>
-    {Array.from('à\xa0propos').map((letter, index) => (
-        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
-            {letter}
-        </span>
-    ))}
-</button>
+                <button onClick={() => navigateToSection('about')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+
+                    <span className="text-pink-500 mr-2">#</span>
+                    {Array.from('à\xa0propos').map((letter, index) => (
+                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                            {letter}
+                        </span>
+                    ))}
+                </button>
             </li>
         </ul>
     );
@@ -129,8 +134,6 @@ export function Navbar() {
                 className={`flex justify-end py-8 pr-40 sticky top-0 bg-transparent ${blur ? 'backdrop-blur' : ''}`}
                 style={{ zIndex: 1000 }} // ensure navbar is at the top layer
             >
-
-
                 {isMobile ? (
                     <>
                         <button
@@ -145,9 +148,10 @@ export function Navbar() {
                     menuItems
                 )}
             </nav>
-
+            {isOpen && isMobile && <div className="blur-background"></div>}
         </>
     );
+
 }
 
 export default Navbar;
