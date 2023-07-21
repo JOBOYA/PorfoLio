@@ -73,7 +73,7 @@ export default function Home() {
                 variants={iconVariants}
                 transition={{ ease: "easeInOut", duration: 1 }}
               >
-                <div className="h-60 w-0.5 bg-gray-400"></div>
+                <div className="top-0 h-60 w-0.5 bg-gray-400"></div>
                 <div className="flex flex-col items-start space-y-4 ml-[-14px] py-3">
                   <Link href="https://github.com/JOBOYA" target="_blank">
                   <FaGithub className="text-white transition-transform hover:scale-110" size={30} />

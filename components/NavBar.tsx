@@ -78,7 +78,7 @@ export function Navbar() {
         <ul className={isMobile ? "space-y-4" : "space-x-4"}>
             <li className={`${(showHome || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
 
-                <button onClick={() => navigateToSection('/')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+                <button onClick={() => navigateToSection('accueil')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
 
                     <span className="text-pink-500 mr-2">#</span>
                     {Array.from('accueil').map((letter, index) => (
