@@ -47,8 +47,8 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                             <Image src={imageUrl} layout="fill" className="rounded-full" alt="Profile Picture" />
                         </div>
                     </div>
-                    <div style={{width: '250px', height: '150px', overflowX: 'auto'}} className="py-8 border-y-4 px-4 border border-purple-500 rounded">
-                        <span style={{ color: 'white', fontWeight: 'bold' }}>
+                    <div style={{width: '100%', maxWidth: '20rem', height: '150px', overflowX: 'auto'}} className="py-8 border-y-4 px-4 border border-purple-500 rounded">
+  <span style={{ color: 'white', fontWeight: 'bold' }}>
                             <Typewriter
                                 words={[
                                     "Élaguer un code, c'est tailler une branche sur l'arbre de Git.",

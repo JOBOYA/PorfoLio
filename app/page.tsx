@@ -1,6 +1,6 @@
 'use client'
 import { Loading } from "@nextui-org/react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Nav from '../components/NavBar';
 import Header from '../components/Header';
 import Project from '../components/Projects';
@@ -12,11 +12,30 @@ import { MdClose, MdArrowUpward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import './globals.css';
 import Link from "next/link";
+import { Application } from '@splinetool/runtime';
+
+
+
+
+
+
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(true);
+
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const app = new Application(canvas);
+      app.load('https://draft.spline.design/nqlzPAFHDTDQuVfL/scene.splinecode');
+    }
+  }, []);
+  
 
   const variants = {
     hidden: { opacity: 0, y: -100 },
@@ -59,6 +78,9 @@ export default function Home() {
 
   return (
     <>
+  
+
+
       {isLoading ? (
         <div className="loading-container">
           <Loading style={{ textIndent: '-9999px' }}></Loading>
@@ -109,10 +131,36 @@ export default function Home() {
           <Nav />
           <div className="m-12">
             <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+            {isLoading ? (
+  <div className="loading-container">
+    <Loading style={{ textIndent: '-9999px' }}></Loading>
+  </div>
+) : (
+            <div className="mt-4 mb-4">
+            <canvas id="canvas3d"  ></canvas>
+                </div>
+)}
+
           </div>
-          <div className="mr-8  mb-12">
+          
+         
+
+        
+        
+          
+       
+
+          
+
+  <div>
             <Abouts />
           </div>
+
+
+
+
+          
+
           <div style={{ marginBottom: '20rem' }}>
             <Project />
           </div>
@@ -122,6 +170,8 @@ export default function Home() {
           </div>
         
          
+
+
 
 
           <Footer />

@@ -15,11 +15,12 @@ const Projects = () => {
 
     return (
         <>
+        <div className="mt-12 ">
  <div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
 </div>
 <div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
 </div>
-            <div className="section-container">
+            <div className="section-container ">
                 <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center mb-20">
                     <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
                         <span className="text-pink-500">#</span>Projets
@@ -242,6 +243,7 @@ const Projects = () => {
             <div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
 </div>
 <div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
+</div>
 </div>
         </>
     )

@@ -17,7 +17,7 @@ export default function Skills() {
     <div id="skills" className="pl-12 md:pl-72 items-center mx-4 sm:mx-0">
         <h1 className="relative right-8 md:right-28 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 "> 
             <span className="text-pink-500">#</span>Skills
-            <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '1px', width: '60.33%', backgroundColor: '#D946EF' }}></span>
+            <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '1px', width: '50.33%', backgroundColor: '#D946EF' }}></span>
         </h1>
     </div>
 

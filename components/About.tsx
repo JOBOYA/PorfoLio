@@ -1,10 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+
+
 export default function About() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 300 && !isVisible) { 
+            setIsVisible(true);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, [isVisible]); 
+
+
+
   return (
     <>
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: isVisible ? 1 : 0 }}
+    transition={{ duration: 1 }}
+>
      <div className="float-right md:block hidden">
     <Image src="/assets/dot.png" alt="description" width={200} height={100} />
   </div>
@@ -19,11 +44,11 @@ export default function About() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className='section-container'>
+        <div className='section-container about-container'>
           <div id="about" className="px-4 md:px-48 m-8">
             {/* Votre code de titre */}
     
-            <div className="mt-8 max-w-3xl mx-auto text-center">
+            <div className="mt-8  max-w-3l mx-auto text-center">
             <p className="text-white text-base md:text-lg leading-tight tracking-tight text-justify">
               🚀 Je suis un développeur front-end passionné, cuisinant des codes bio dans la cuisine numérique. Toujours avide de nouveaux défis, je cherche constamment des recettes inédites pour créer des sites web modernes et innovants.
 
@@ -38,14 +63,16 @@ export default function About() {
         </div>
       </motion.div>
 
-    <div className="float-right md:block hidden">
+
+      {/*className="float-right md:block hidden"*/}
+    <div className="float-right md:block hidden" >
     <Image src="/assets/dot.png" alt="description" width={200} height={100} />
   </div>
 
   <div className="mr-8 mt-20 md:block hidden">
     <Image src="/assets/dot.png" alt="description" width={200} height={100} />
   </div>
-  
+  </motion.div>
 
     </>
   )
