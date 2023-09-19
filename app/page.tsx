@@ -20,8 +20,8 @@ import { Application } from '@splinetool/runtime';
 
 
 
-
 export default function Home() {
+
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(true);
@@ -29,26 +29,38 @@ export default function Home() {
 
 
   const canvasRef = useRef(null);
+ 
 
 
-  
   
   useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+
+    // Simuler le chargement avec un intervalle
+    if (isLoading) {
+      interval = setInterval(() => {
+       
+      }, 300); // Augmente de 5% toutes les 300ms
+    }
+
     const canvas = canvasRef.current;
     if (canvas) {
-      setTimeout(() => {  // Introduire un délai
+      setTimeout(() => {
         const app = new Application(canvas);
         app.load('https://draft.spline.design/O3QVht8akCWApEUe/scene.splinecode')
-          .then(() => {
-            setIsLoading(false);
-          })
-          .catch(error => {
-            console.log("Erreur :", error);
-          });
-      }, 2000);  // 2000 ms = 2 secondes
+        .then(() => {
+          setIsLoading(false);
+          clearInterval(interval); // Arrêter l'interval une fois le chargement terminé
+        })
+        .catch(error => {
+          console.log("Erreur :", error);
+          alert('Une erreur est survenue: ' + error.message);
+          clearInterval(interval); // Arrêter l'interval même en cas d'erreur
+        });
+      }, 6000); // Le délai avant de commencer le chargement
     }
-  }, []);
-  
+  }, [isLoading, canvasRef]);
+      
 
   
   
@@ -146,7 +158,17 @@ export default function Home() {
           )}
           <Nav />
           <div className="m-12">
+         
             <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
+            {isLoading ? (
+        <div className="bg-black opacity-5 ">
+          
+          {/* Votre loader visuel ici */}
+        </div>
+      ) : (
+        <canvas ref={canvasRef} id="canvas3d"></canvas>
+      )}
+            
             </div>
           
          
@@ -158,15 +180,18 @@ export default function Home() {
 
            
             
-
+            
 
           
 
-  <div className="opacity-50 absolute top-0 left-0 right-0 bottom-0 z-0">
-  <canvas id="canvas3d" ref={canvasRef}></canvas>
-</div>
+          
 <div>
+
+
             <Abouts />
+            
+      
+    
           </div>
 
 
