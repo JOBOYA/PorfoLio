@@ -57,7 +57,7 @@ export default function Home() {
           alert('Une erreur est survenue: ' + error.message);
           clearInterval(interval); // Arrêter l'interval même en cas d'erreur
         });
-      }, 6000); // Le délai avant de commencer le chargement
+      }, 1000); // Le délai avant de commencer le chargement
     }
   }, [isLoading, canvasRef]);
       
