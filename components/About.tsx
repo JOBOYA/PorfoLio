@@ -48,17 +48,18 @@ export default function About() {
           <div id="about" className="px-4 md:px-48 m-8">
             {/* Votre code de titre */}
     
-            <div className="mt-8  max-w-3l mx-auto text-center">
-            <p className="text-white text-base md:text-lg leading-tight tracking-tight text-justify">
-              🚀 Je suis un développeur front-end passionné, cuisinant des codes bio dans la cuisine numérique. Toujours avide de nouveaux défis, je cherche constamment des recettes inédites pour créer des sites web modernes et innovants.
+            <div className="mt-8 max-w-3l mx-auto text-center">
+  <p className="text-white text-base md:text-lg leading-tight tracking-tight text-justify">
+    🚀 Passionné de développement front-end spécialisé en React, je m&apos;efforce de créer des expériences web uniques et performantes.
+    
+    <br />&#x1F468;&zwj;&#x1F4BB; La programmation n&rsquo;est pas simplement un travail pour moi, mais une passion qui me pousse &agrave; explorer de nouvelles technologies, notamment dans l&rsquo;&eacute;cosyst&egrave;me React.
+    
+    <br />🏆 Ci-dessous, vous trouverez une sélection soignée de projets que j&apos;ai réalisés, mettant en lumière mon expertise en React et dans d&apos;autres technologies associées.
+    
+    <br />📂 Pour chaque projet, je fournis une description détaillée ainsi que des liens vers le code source, témoignant de ma capacité à résoudre des problèmes complexes et à conduire un projet du début à la fin.
+  </p>
+</div>
 
-<br />👨‍🍳 Coder est mon passe-temps préféré, un peu comme un chef qui adore expérimenter en dehors des heures de service. Je suis toujours prêt à apprendre de nouvelles épices de programmation pour enrichir mon palais de compétences.
-
-<br />🍽 Les projets qui suivent sont comme un menu dégustation de ma carrière. Ils montrent un éventail de mes compétences, à travers des plats concrets que j&apos;ai créés.
-
-<br />🗂 Chaque projet est brièvement décrit avec des liens vers mes garde-manger de code. Cela illustre ma capacité à concocter des solutions à des problèmes complexes, à jongler avec une variété d&apos;ingrédients technologiques, et à orchestrer efficacement des projets, comme un chef gère son service.
-</p>
-            </div>
           </div>
         </div>
       </motion.div>

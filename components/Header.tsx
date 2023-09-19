@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                     <h1 className="text-4xl font-bold mb-4 md:mb-0 md:mr-4">
                         👨‍💻
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">{text}</span>
-                        <p className="text-sm text-slate-600 mb-4 md:mb-0 md:mr-4">
+                        <p className="text-sm text-slate-300 mb-4 md:mb-0 md:mr-4">
                             Je créé des sites web réactifs où les technologies rencontrent la créativité.
                             <br />
                         </p>

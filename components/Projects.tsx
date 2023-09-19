@@ -42,7 +42,7 @@ const Projects = () => {
                     </div>
                     <Grid.Container justify="center" alignItems="center" gap={2} className="projects" id="projects">
                         <Grid.Container justify="center" alignItems="center" gap={2} className="projects__topRow">
-                            <Tilt>
+                           <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
                                         initial={{ opacity: 0 }}
@@ -79,9 +79,9 @@ const Projects = () => {
 
                                     </motion.div>
                                 </Grid>
-                            </Tilt>
+                            </div>
 
-                            <Tilt>
+                           <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
                                         initial={{ opacity: 0 }}
@@ -116,9 +116,9 @@ const Projects = () => {
 
                                     </motion.div>
                                 </Grid>
-                            </Tilt>
+                            </div>
 
-                            <Tilt>
+                           <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
                                         initial={{ opacity: 0 }}
@@ -150,10 +150,10 @@ const Projects = () => {
 
                                     </motion.div>
                                 </Grid>
-                            </Tilt>
+                            </div>
                         </Grid.Container>
 
-                        <Tilt>
+                       <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
                                         initial={{ opacity: 0 }}
@@ -188,9 +188,9 @@ const Projects = () => {
 
                                     </motion.div>
                                 </Grid>
-                            </Tilt>
+                            </div>
 
-                        <Tilt>
+                       <div>
                             <Grid xs={24} sm={12} md={8} lg={8} xl={8} justify="center" alignItems="center" className="projects__left">
                                 <motion.div
                                     initial={{ opacity: 0 }}
@@ -234,7 +234,7 @@ const Projects = () => {
                                     </Link>
                                 </motion.div>
                             </Grid>
-                        </Tilt>
+                        </div>
                        
 
                      

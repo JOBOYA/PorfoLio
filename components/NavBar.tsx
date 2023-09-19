@@ -69,9 +69,9 @@ export function Navbar() {
                 sectionElement.scrollIntoView({ behavior: 'smooth' });
             }
         } else {
-            window.location.href = `/#${sectionId}`;
+            window.location.hash = sectionId;  // Ajout de cette ligne
+            setIsOpen(false);
         }
-        setIsOpen(false);
     };
 
     const menuItems = (
@@ -92,7 +92,7 @@ export function Navbar() {
 
             </li>
 
-            <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+            <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
                 <button onClick={() => navigateToSection('projects')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
 
                     <span className="text-pink-500 mr-2">#</span>
@@ -103,7 +103,7 @@ export function Navbar() {
                     ))}
                 </button>
             </li>
-            <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+            <li className={`${(showAbout || !isMobile) ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
                 <button onClick={() => navigateToSection('skills')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
 
                     <span className="text-pink-500 mr-2">#</span>
@@ -114,7 +114,7 @@ export function Navbar() {
                     ))}
                 </button>
             </li>
-            <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+            <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
                 <button onClick={() => navigateToSection('about')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
 
                     <span className="text-pink-500 mr-2">#</span>
