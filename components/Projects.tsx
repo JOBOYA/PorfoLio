@@ -50,7 +50,7 @@ const Projects = () => {
                                         transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
-                                        <Link href="https://lequaiantique.000webhostapp.com/" target="_blank">
+                                        <Link href="https://laboheme-valence.fr/" target="_blank">
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
                                             <div className="absolute top-0 right-0 p-2 z-10">
                                                 <Link href="https://github.com/JOBOYA/Le_Quai_Antique" target="_blank">
@@ -58,12 +58,14 @@ const Projects = () => {
                                                 </Link>
                                             </div>
                                             <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
-                                                <span className="text-white text-sm">Restaurant &quot;Le Quai Antique&quot;</span>
+                                                <span className="text-white text-sm">Restaurant &quot;La Bohême &quot;</span>
                                                 <div className="flex justify-center mt-1">
                                                     <Image src="/media/tech/html.png" width={24} height={24} alt="html" className="h-6 ml-2" />
                                                     <Image src="/media/tech/css.png" width={24} height={24} alt="css" className="h-6 ml-2" />
                                                     <Image src="/media/tech/javascript.png" width={24} height={24} alt="js" className="h-6 ml-2" />
-                                                    <Image src="/media/tech/php.png" width={24} height={24} alt="php" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/nodejs.png" width={24} height={24} alt="node" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/git.png" width={24} height={24} alt="git" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/notion.png" width={24} height={24} alt="notion" className="h-6 ml-2" />
                                                 </div>
                                             </div>
 

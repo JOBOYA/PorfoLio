@@ -31,7 +31,7 @@ export default function Footer() {
   }, [controls, isNearBottom]);
 
   return (
-    <footer className="flex items-center justify-center border bg-transparent text-white p-4 sm:p-6 space-x-4 rounded-xl max-w-6xl mx-4 sm:mx-auto mb-8">
+    <footer className="flex items-center justify-center border bg-transparent text-white p-4 sm:p-6 space-x-4 rounded-xl max-w-6xl mx-4 sm:mx-auto">
       <div className="flex space-x-4">
         <motion.a href="https://github.com/JOBOYA" target="_blank" rel="noopener noreferrer"
           initial={{ x: -200 }}

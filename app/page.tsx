@@ -160,14 +160,16 @@ export default function Home() {
           <div className="m-12">
          
             <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
-            {isLoading ? (
-        <div className="bg-black opacity-5 ">
-          
-          {/* Votre loader visuel ici */}
-        </div>
-      ) : (
-        <canvas ref={canvasRef} id="canvas3d"></canvas>
-      )}
+            {!isMobile ? (
+  isLoading ? (
+    <div>
+      
+    </div>
+  ) : (
+    <canvas ref={canvasRef} id="canvas3d"></canvas>
+  )
+) : null}
+
             
             </div>
           
