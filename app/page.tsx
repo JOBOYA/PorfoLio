@@ -25,16 +25,32 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isIconsVisible, setIsIconsVisible] = useState(true);
+  
+
 
   const canvasRef = useRef(null);
 
+
+  
+  
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas) {
-      const app = new Application(canvas);
-      app.load('https://draft.spline.design/nqlzPAFHDTDQuVfL/scene.splinecode');
+      setTimeout(() => {  // Introduire un délai
+        const app = new Application(canvas);
+        app.load('https://draft.spline.design/O3QVht8akCWApEUe/scene.splinecode')
+          .then(() => {
+            setIsLoading(false);
+          })
+          .catch(error => {
+            console.log("Erreur :", error);
+          });
+      }, 2000);  // 2000 ms = 2 secondes
     }
   }, []);
+  
+
+  
   
 
   const variants = {
@@ -131,17 +147,7 @@ export default function Home() {
           <Nav />
           <div className="m-12">
             <Header text="Frontend Developer React | TypeScript" imageUrl="/assets/joseph1.png" />
-            {isLoading ? (
-  <div className="loading-container">
-    <Loading style={{ textIndent: '-9999px' }}></Loading>
-  </div>
-) : (
-            <div className="mt-4 mb-4">
-            <canvas id="canvas3d"  ></canvas>
-                </div>
-)}
-
-          </div>
+            </div>
           
          
 
@@ -150,9 +156,16 @@ export default function Home() {
           
        
 
+           
+            
+
+
           
 
-  <div>
+  <div className="opacity-50 absolute top-0 left-0 right-0 bottom-0 z-0">
+  <canvas id="canvas3d" ref={canvasRef}></canvas>
+</div>
+<div>
             <Abouts />
           </div>
 
