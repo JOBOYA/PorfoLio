@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-                <div className="flex flex-col items-start md:flex-row md:items-center p-12 mt-28 md:mt-0 mx-auto px-2 md:px-4 max-w-screen-lg">
+                <div id='accueil' className="flex flex-col items-start md:flex-row md:items-center p-12 mt-28 md:mt-0 mx-auto px-2 md:px-4 max-w-screen-lg">
                     {/* Image */}
                     <h1 className="text-4xl font-bold mb-4 md:mb-0 md:mr-4">
                         👨‍💻

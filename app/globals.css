@@ -191,18 +191,50 @@ button:hover .waviy {
   
 
 
-  /***********************/
+  /********bulle yeti***************/
+  .yeti-container {
+    position: relative;
+    width: auto;
+    height: auto;
+}
 
- 
+.bulle {
+    display: none;
+    position: absolute;
+    right: -110px; /* Utilisez "left" au lieu de "right" */
+    top: -30px;  /* Ajustez selon le besoin pour la bulle de monter */
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+    transition: opacity 0.3s ease-in-out;
+    
+    
+}
 
-  
+.bulle.active {
+  display: block;
+    opacity: 1; /* Opacité à 1 lorsque la classe "active" est ajoutée */
+}
 
-  /* CSS */
-/*@media (min-width: 1024px) {
-  .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+.bulle::before {
+  content: "";
+   position: absolute;
+   top: 45%;
+   right: 100%;  /* Changez à "right" pour que la pointe soit à gauche */
+   border-right: 15px solid white;  /* Changez border-left à border-right */
+   border-top: 15px solid transparent;
+   border-bottom: 15px solid transparent;
+}
+
+
+@media (max-width: 768px) {
+  .bulle {
+    right: -90px;
+    top: -20px;
   }
 }
-*/
+
+

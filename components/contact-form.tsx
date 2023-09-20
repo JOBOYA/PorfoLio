@@ -9,7 +9,7 @@ export default function ContactForm() {
     return (
         <>
            
-          <div className="flex flex-col rounded-lg justify-center items-center min-h-screen ">
+          <div id="contact" className="flex flex-col rounded-lg justify-center items-center min-h-screen ">
           
           <div className="mb-4 flex flex-col items-center">
           <Yeti />

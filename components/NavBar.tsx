@@ -10,6 +10,7 @@ export function Navbar() {
     const [showHome, setShowHome] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const [showContact, setShowContact] = useState(false);
+    const [showContactForm, setShowContactForm] = useState(false);
     
 
     const [blur, setBlur] = useState(false);  // New state
@@ -70,10 +71,18 @@ export function Navbar() {
                 sectionElement.scrollIntoView({ behavior: 'smooth' });
             }
         } else {
-            window.location.hash = sectionId;  // Ajout de cette ligne
+            window.location.hash = sectionId;  
             setIsOpen(false);
         }
     };
+
+    useEffect(() => {
+        const sectionId = window.location.hash.slice(1);
+      
+        if(sectionId) {
+          document.getElementById(sectionId)?.scrollIntoView(); 
+        }
+      }, [])
 
     const menuItems = (
         <ul className={isMobile ? "space-y-4" : "space-x-4"}>
@@ -83,7 +92,7 @@ export function Navbar() {
 
                     <span className="text-pink-500 mr-2">#</span>
                     {Array.from('accueil').map((letter, index) => (
-                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                        <span key={index} style={{ transitionDelay: `${index * 10}ms` }} className="inline-block">
                             {letter}
                         </span>
                     ))}
@@ -98,7 +107,7 @@ export function Navbar() {
 
                     <span className="text-pink-500 mr-2">#</span>
                     {Array.from('projets').map((letter, index) => (
-                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                        <span key={index} style={{ transitionDelay: `${index * 10}ms` }} className="inline-block">
                             {letter}
                         </span>
                     ))}
@@ -109,7 +118,7 @@ export function Navbar() {
 
                     <span className="text-pink-500 mr-2">#</span>
                     {Array.from('skills').map((letter, index) => (
-                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                        <span key={index} style={{ transitionDelay: `${index * 10}ms` }} className="inline-block">
                             {letter}
                         </span>
                     ))}
@@ -120,7 +129,17 @@ export function Navbar() {
 
                     <span className="text-pink-500 mr-2">#</span>
                     {Array.from('à\xa0propos').map((letter, index) => (
-                        <span key={index} style={{ transitionDelay: `${index * 50}ms` }} className="inline-block">
+                        <span key={index} style={{ transitionDelay: `${index * 10}ms` }} className="inline-block">
+                            {letter}
+                        </span>
+                    ))}
+                </button>
+            </li>
+            <li className={`${(showContact || !isMobile) ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'} ${isMobile ? "block" : "inline-block"}`}>
+                <button onClick={() => navigateToSection('contact')} className={`${isMobile ? "text-lg uppercase" : ""} text-slate-50 hover:text-purple-500`}>
+                    <span className="text-pink-500 mr-2">#</span>
+                    {Array.from('contact').map((letter, index) => (
+                        <span key={index} style={{ transitionDelay: `${index * 10}ms` }} className="inline-block">
                             {letter}
                         </span>
                     ))}

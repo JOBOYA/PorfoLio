@@ -1,10 +1,17 @@
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
+import { Typewriter } from 'react-simple-typewriter'
 
 //Moove eye yeti svg with mouse
 const Yeti: React.FC = () => {
+    const [showBubble, setShowBubble] = useState(false);
+    const [hasTypewriterPlayed, setHasTypewriterPlayed] = useState(false);
+
+
     const svgRef = useRef<SVGSVGElement | null>(null);
     const eyeL = useRef<SVGCircleElement | null>(null);
     const eyeR = useRef<SVGCircleElement | null>(null);
+    
+
     
     useEffect(() => {
         const moveEyes = (e: any) => {
@@ -52,12 +59,66 @@ eyeR.current.cy.baseVal.value = eyeRY;
         return () => window.removeEventListener("mousemove", moveEyes);
     }, []);
     
+    const handleClick = () => {
+      
+    setShowBubble(!showBubble);
+      };
+    
 
+      //type writer
+      useEffect(() => {
+        const checkScroll = () => {
+          if (svgRef.current) {
+            const rect = svgRef.current.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+              // La section est visible
+              setHasTypewriterPlayed(true);
+            }
+          }
+        };
+        
+        window.addEventListener("scroll", checkScroll);
+        
+        return () => {
+          window.removeEventListener("scroll", checkScroll);
+        };
+      }, []);
+      
 
+      useEffect(() => {
+        if (hasTypewriterPlayed) {
+          // Calculez le temps total de l'animation
+          const totalTime = "Cliquer sur le Yeti pour le faire parler".length * 70 + 1000; // longueur du texte * typeSpeed + delaySpeed
+          const timer = setTimeout(() => {
+            setHasTypewriterPlayed(false); // Arrête l'animation
+          }, totalTime);
+          return () => clearTimeout(timer); // Nettoyage
+        }
+      }, [hasTypewriterPlayed]);
+      
 
   return (
-    <div  className="w-44 h-44 rounded-full overflow-hidden">
-    <svg  className="yeti-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" ref={svgRef}>
+    <>
+    <div >
+    {hasTypewriterPlayed && (
+        <Typewriter
+          words={["Cliquer sur le Yeti pour le faire parler"]}
+          
+          loop={0} // pas de boucle
+          cursor
+          cursorStyle="_"
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={1000}
+        />
+      )}
+    </div>
+    <div className="yeti-container">
+     
+
+
+    <div onClick={handleClick}   className="w-44 h-44 rounded-full overflow-hidden">
+    <svg   className="yeti-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" ref={svgRef}>
     <defs>
         <circle id="armMaskPath" cx="100" cy="100" r="100"/>	
     </defs>
@@ -99,11 +160,11 @@ eyeR.current.cy.baseVal.value = eyeRY;
         <path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M63.56,55.102 c6.243,5.624,13.38,10.614,21.296,14.738c2.071-2.785,4.01-5.626,5.816-8.515c4.537,3.785,9.583,7.263,15.097,10.329 c1.197-3.043,2.287-6.104,3.267-9.179c4.087,2.004,8.427,3.761,12.996,5.226c0.545-3.348,0.986-6.696,1.322-10.037 c4.913-0.481,9.857-1.34,14.787-2.599"/>
     </g>
     <g className="eyeL">
-    <circle ref={eyeL} cx="85.5" cy="78.5" r="3.5" fill="#3a5e77" />
+    <circle ref={eyeL} cx="85.5" cy="78.5" r="5.5" fill="#3a5e77" />
     <circle cx="84" cy="76" r="1" fill="#fff" />
 </g>
 <g className="eyeR">
-    <circle ref={eyeR} cx="114.5" cy="78.5" r="3.5" fill="#3a5e77" />
+    <circle ref={eyeR} cx="114.5" cy="78.5" r="5.5" fill="#3a5e77" />
     <circle cx="113" cy="76" r="1" fill="#fff" />
 </g>
 
@@ -166,7 +227,16 @@ eyeR.current.cy.baseVal.value = eyeRY;
 
     
 </svg>
+<div  className={`bulle ${showBubble ? 'active' : ''}`}>
+        {showBubble && (
+          <div className="rounded-full p-4 transition-opacity duration-300 ease-in-out opacity-100">
+            <a href="https://joboya.github.io/Terminal-Portfolio/">Clique !!</a>
+          </div>
+        )}
+      </div>
+    </div>
 </div>
+</>
   );
 };
 
