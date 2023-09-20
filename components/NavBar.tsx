@@ -10,6 +10,7 @@ export function Navbar() {
     const [showHome, setShowHome] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const [showContact, setShowContact] = useState(false);
+    
 
     const [blur, setBlur] = useState(false);  // New state
 
@@ -131,24 +132,31 @@ export function Navbar() {
     return (
         <>
             <nav
-                className={`flex justify-end py-8 pr-40 sticky top-0 bg-transparent ${blur ? 'backdrop-blur' : ''}`}
-                style={{ zIndex: 1000 }} // ensure navbar is at the top layer
+className={`flex justify-end py-8 pr-40 sticky top-0 bg-transparent ${blur && !isMobile ? 'backdrop-blur' : ''}`}
+
+style={{ zIndex: 1000 }} // ensure navbar is at the top layer
             >
                 {isMobile ? (
                     <>
-                        <button
-                            className=" text-slate-50 hover:text-purple-500 z-10 focus:outline-none"
-                            onClick={() => setIsOpen(!isOpen)}
-                        >
-                            {isOpen ? <AiOutlineClose size={32} /> : <AiOutlineMenu size={32} />}
-                        </button>
+
+                      <div className="flex justify-end">
+                      <button
+  className="text-slate-50 hover:text-purple-500 z-10 focus:outline-none"
+  style={{ border: '1px solid gray', position: 'absolute', right: '10px', top: '10px', borderRadius: '5px'}}
+  onClick={() => setIsOpen(!isOpen)}
+>
+  {isOpen ? <AiOutlineClose size={32} /> : <AiOutlineMenu size={32} />}
+</button>
+
+  </div>
+
                         {isOpen && <div className=" absolute top-full z-10">{menuItems}</div>}
                     </>
                 ) : (
                     menuItems
                 )}
             </nav>
-            {isOpen && isMobile && <div className="blur-background"></div>}
+            {isOpen && isMobile && <div className={`blur-background ${isOpen ? 'blur-more' : ''}`}></div>}
         </>
     );
 

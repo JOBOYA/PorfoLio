@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@nextui-org/react": "^1.0.0-beta.13",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-spring/web": "^9.7.2",

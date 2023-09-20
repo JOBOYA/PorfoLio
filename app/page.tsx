@@ -6,9 +6,10 @@ import Header from '../components/Header';
 import Project from '../components/Projects';
 import Skills from '../components/skills';
 import Abouts from '../components/About';
+import Contact from '../components/contact-form';
 
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { MdClose, MdArrowUpward } from 'react-icons/md';
+import { MdArrowUpward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import './globals.css';
 import Link from "next/link";
@@ -188,6 +189,9 @@ export default function Home() {
           <Skills />
           </div>
 
+          
+          <Contact />
+         
           
           
         </>
