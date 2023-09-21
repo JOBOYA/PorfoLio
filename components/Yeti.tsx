@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState} from 'react';
-import { Typewriter } from 'react-simple-typewriter'
+import {TypeWritter} from '../components/TypeWritter';
 
 //Moove eye yeti svg with mouse
 const Yeti: React.FC = () => {
     const [showBubble, setShowBubble] = useState(false);
-    const [hasTypewriterPlayed, setHasTypewriterPlayed] = useState(false);
+   
 
 
     const svgRef = useRef<SVGSVGElement | null>(null);
@@ -65,55 +65,17 @@ eyeR.current.cy.baseVal.value = eyeRY;
       };
     
 
-      //type writer
-      useEffect(() => {
-        const checkScroll = () => {
-          if (svgRef.current) {
-            const rect = svgRef.current.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-              // La section est visible
-              setHasTypewriterPlayed(true);
-            }
-          }
-        };
-        
-        window.addEventListener("scroll", checkScroll);
-        
-        return () => {
-          window.removeEventListener("scroll", checkScroll);
-        };
-      }, []);
-      
-
-      useEffect(() => {
-        if (hasTypewriterPlayed) {
-          // Calculez le temps total de l'animation
-          const totalTime = "Cliquer sur le Yeti pour le faire parler".length * 70 + 1000; // longueur du texte * typeSpeed + delaySpeed
-          const timer = setTimeout(() => {
-            setHasTypewriterPlayed(false); // Arrête l'animation
-          }, totalTime);
-          return () => clearTimeout(timer); // Nettoyage
-        }
-      }, [hasTypewriterPlayed]);
+      ;
       
 
   return (
     <>
-    <div >
-    {hasTypewriterPlayed && (
-        <Typewriter
-          words={["Cliquer sur le Yeti pour le faire parler"]}
+    <div className="flex justify-center items-center">
+          <TypeWritter />
           
-          loop={0} // pas de boucle
-          cursor
-          cursorStyle="_"
-          typeSpeed={70}
-          deleteSpeed={50}
-          delaySpeed={1000}
-        />
-      )}
-    </div>
-    <div className="yeti-container">
+          </div>
+
+    <div className="yeti-container ">
      
 
 

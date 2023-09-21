@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaTrello, FaGithub } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaTrello, FaGithub, FaVuejs } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
 import { FiFigma } from 'react-icons/fi';
@@ -11,6 +11,8 @@ export default function Skills() {
 
   return (
     <>
+    
+
       <div className="section-container p-14">
         <div id="skills" className="pl-12 md:pl-72 items-center mx-4 sm:mx-0">
           <h1 className="relative right-8 md:right-28 text-white text-5xl font-bold mb-4 md:mb-0 md:mr-4">
@@ -18,41 +20,59 @@ export default function Skills() {
             <span style={{ position: 'absolute', left: '150px', bottom: '20px', height: '2px', width: '50.33%', backgroundColor: '#D946EF' }}></span>
           </h1>
         </div>
-        <div className="flex flex-col md:flex-row justify-start items-center mt-16 mx-4 sm:mx-0">
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+
+
           <div className="w-full md:w-1/3 md:self-start">
-            <Image src="/assets/skills.png" alt="skills" width={300} height={300} className="rounded-full flex-start md:block hidden" />
+            <Image src="/assets/skills.png" alt="skills" width={300} height={300} className="rounded flex-start md:block hidden" />
           </div>
 
           <motion.div style={{ scale }} className="w-full md:w-2/3 justify-evenly">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex flex-col space-y-20 md:space-y-0 md:space-x-16 justify-center items-center md:flex-row">
-              <div className="border-4 border-pink-500 rounded-md p-8">
-                <h1 className="text-white text-3xl font-bold">Languages</h1>
-                <ul className="list-disc list-inside text-white text-xl pl-5 flex flex-col space-y-4">
-                  <li className="flex items-center text-2xl"><FaJs className="mr-4 h-8 w-8" />JavaScript</li>
-                  <li className="flex items-center text-2xl"><SiTypescript className="mr-4 h-8 w-8" />TypeScript</li>
-                  <li className="flex items-center text-2xl"><FaHtml5 className="mr-4 h-8 w-8" />HTML</li>
-                  <li className="flex items-center text-2xl"><FaCss3Alt className="mr-4 h-8 w-8" />CSS</li>
+            <div className="border-4 border-pink-500 rounded-md p-4 md:p-8 w-full md:w-1/3" style={{minWidth: '200px'}}>
+
+
+
+            <h1 className="text-white text-2xl md:text-2xl font-bold">Languages</h1>
+
+
+                <ul className="list-disc list-inside text-white text-lg pl-5 flex flex-col space-y-2 md:space-y-4 break-words">
+
+                  <li className="flex items-center text-xl"><FaJs className="mr-4 h-6 w-6" />JavaScript</li>
+                  <li className="flex items-center text-xl"><SiTypescript className="mr-4 h-6 w-6" />TypeScript</li>
+                  <li className="flex items-center text-xl"><FaHtml5 className="mr-4 h-6 w-6" />HTML</li>
+                  <li className="flex items-center text-xl"><FaCss3Alt className="mr-4 h-6 w-6" />CSS</li>
                 </ul>
               </div>
-              <div className="border-4 border-pink-500 rounded-md p-8">
-                <h1 className="text-white text-3xl font-bold">Frameworks</h1>
-                <ul className="list-disc list-inside text-white text-xl pl-5 flex flex-col space-y-4">
-                  <li className="flex items-center text-2xl"><FaReact className="mr-4 h-8 w-8" />React</li>
+              <div className="border-4 border-pink-500 rounded-md p-4 md:p-8 w-full md:w-1/3" style={{minWidth: '200px'}}>
+
+
+                <h1 className="text-white text-2xl font-bold">Frameworks</h1>
+                <ul className="list-disc list-inside text-white text-lg pl-5 flex flex-col space-y-2 md:space-y-4 break-words">
+
+                  <li className="flex items-center text-xl"><FaReact className="mr-4 h-6 w-6" />React</li>
+                  <li className="flex items-center text-xl"><FaVuejs className="mr-4 h-6 w-6" />Vuejs</li>
                 </ul>
               </div>
-              <div className="border-4 border-pink-500 rounded-md p-8">
-                <h1 className="text-white text-3xl font-bold">Tools</h1>
-                <ul className="list-disc list-inside text-white text-xl pl-5 flex flex-col space-y-4">
-                  <li className="flex items-center text-2xl"><TbBrandVscode className="mr-4 h-8 w-8" />Vscode</li>
-                  <li className="flex items-center text-2xl"><FiFigma className="mr-4 h-8 w-8" />Figma</li>
-                  <li className="flex items-center text-2xl"><FaTrello className="mr-4 h-8 w-8" />Trello</li>
-                  <li className="flex items-center text-2xl"><FaGithub className="mr-4 h-8 w-8" />Github</li>
+              <div className="border-4 border-pink-500 rounded-md p-4 md:p-8 w-full md:w-1/3" style={{minWidth: '200px'}}>
+
+
+                <h1 className="text-white text-2xl font-bold">Tools</h1>
+                <ul className="list-disc list-inside text-white text-lg pl-5 flex flex-col space-y-2 md:space-y-4 break-words">
+
+                  <li className="flex items-center text-xl"><TbBrandVscode className="mr-4 h-6 w-6" />Vscode</li>
+                  <li className="flex items-center text-xl"><FiFigma className="mr-4 h-6 w-6" />Figma</li>
+                  <li className="flex items-center text-xl"><FaTrello className="mr-4 h-6 w-6" />Trello</li>
+                  <li className="flex items-center text-xl"><FaGithub className="mr-4 h-6 w-6" />Github</li>
                 </ul>
               </div>
             </div>
+          </div>
           </motion.div>
         </div>
       </div>
+    
     </>
   );
 }

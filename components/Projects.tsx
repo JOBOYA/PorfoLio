@@ -15,18 +15,20 @@ const Projects = () => {
 
     return (
         <>
-        <div className="mt-12 ">
- <div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
-</div>
-<div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
-</div>
-            <div className="section-container ">
-                <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center mb-20">
+        <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-20">
                     <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
                         <span className="text-pink-500">#</span>Projets
                         <span className="line" style={{ position: 'absolute', left: '180px', bottom: '20px', height: '1px', width: '60%', backgroundColor: '#D946EF' }}></span>
                     </h1>
                 </div>
+        <div className="mt-12 ">
+ <div className="hidden md:block absolute left-0 border border-purple-500 half-border rounded p-12 ">
+</div>
+<div className="hidden md:block absolute right-0 border border-purple-500 half-border rounded p-12 ">
+</div>
+
+            <div className="section-container ">
+               
 
                 <div
                     className="relative flex flex-col items-center justify-center p-5 border-0 md:border-0 rounded-xl shadow-lg space-y-4"
@@ -45,9 +47,9 @@ const Projects = () => {
                            <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
+                                        whileHover={{ rotate: -10 }}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
                                         <Link href="https://laboheme-valence.fr/" target="_blank">
@@ -84,10 +86,10 @@ const Projects = () => {
                            <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 1 }}
-                                        style={{ scale }}
+                                      whileHover={{ rotate: -10 }}
+                                      initial={{ opacity: 0 }}
+                                      animate={{ opacity: 1 }}
+                                      style={{ scale }}
                                     >
                                         <Link href="https://taupe-hummingbird-5f0d47.netlify.app/" target="_blank">
                                         <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
@@ -121,10 +123,10 @@ const Projects = () => {
                            <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 1 }}
-                                        style={{ scale }}
+                                       whileHover={{ rotate: -10 }}
+                                       initial={{ opacity: 0 }}
+                                       animate={{ opacity: 1 }}
+                                       style={{ scale }}
                                     >
                                         <Link href="https://celadon-eclair-1703ea.netlify.app/" target="_blank">
                                         <Card style={{ width: "300px", height: "200px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
@@ -156,9 +158,9 @@ const Projects = () => {
                        <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" className="projects__left">
                                     <motion.div
+                                        whileHover={{ rotate: -10 }}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        transition={{ duration: 1 }}
                                         style={{ scale }}
                                     >
                                         <Link href="https://tangerine-brioche-38768e.netlify.app/" target="_blank">
@@ -193,10 +195,10 @@ const Projects = () => {
                        <div>
                             <Grid xs={24} sm={12} md={8} lg={8} xl={8} justify="center" alignItems="center" className="projects__left">
                                 <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 1 }}
-                                    style={{ scale }}
+                                   whileHover={{ rotate: -10 }}
+                                   initial={{ opacity: 0 }}
+                                   animate={{ opacity: 1 }}
+                                   style={{ scale }}
                                 >
                                     <Link href="https://maformejuridique.fr/" target="_blank">
                                     <Card css={{

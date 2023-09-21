@@ -10,11 +10,20 @@
 body {
   background-color: #2a3136;
   font-family: 'Fira Code', monospace;
-  overflow-x: hidden;
- 
+ overflow-x: hidden;
+  
 
   
 }
+
+
+
+@media (max-width: 768px) {
+ #projects {
+   margin-top: 30rem;
+ }
+}
+
 
 .card-desktop {
   width: 800px;  /* ou la taille que vous voulez */
@@ -148,22 +157,24 @@ button:hover .waviy {
 
 
 .section-container {
-  max-width: 1200px; 
+ 
+  width: 100%;
   margin: auto;   
 }
 
 @media (max-width: 768px) {
   .section-container {
-    margin-bottom: 1rem;
+    margin-bottom: 30rem;
   }
 }
-
 
 @media (max-width: 768px) {
   .border_mobile {
     display: none;
   }
 }
+
+
 
 @media screen and (max-width: 1009px) {
   .title{

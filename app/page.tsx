@@ -7,7 +7,6 @@ import Project from '../components/Projects';
 import Skills from '../components/skills';
 import Abouts from '../components/About';
 import Contact from '../components/contact-form';
-
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdArrowUpward } from 'react-icons/md';
 import { motion } from 'framer-motion';
@@ -174,23 +173,26 @@ export default function Home() {
             
             </div>
    
-<div>
+                <div>
 
             <Abouts />
           
           </div>
 
 
-          <div style={{ marginBottom: '20rem' }}>
-            <Project />
-          </div>
+          <div >
+  <Project />
+</div>
+
 
           <div >
           <Skills />
           </div>
 
           
+
           <Contact />
+          
          
           
           
