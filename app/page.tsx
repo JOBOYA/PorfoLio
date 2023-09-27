@@ -173,27 +173,27 @@ export default function Home() {
             
             </div>
    
-                <div>
-
-            <Abouts />
-          
-          </div>
+           
 
 
-          <div >
+  <Abouts />
+
+
+
   <Project />
-</div>
 
 
-          <div >
-          <Skills />
-          </div>
 
-          
+  <Skills />
 
-          <Contact />
-          
-         
+
+
+  <Contact />
+
+
+
+
+
           
           
         </>

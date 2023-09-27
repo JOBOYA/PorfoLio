@@ -10,19 +10,18 @@
 body {
   background-color: #2a3136;
   font-family: 'Fira Code', monospace;
- overflow-x: hidden;
+ overflow-x: hidden ;
   
 
   
 }
 
 
-
-@media (max-width: 768px) {
- #projects {
-   margin-top: 30rem;
- }
+.projects {
+  overflow: hidden !important;
 }
+
+
 
 
 .card-desktop {
@@ -74,11 +73,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  .projects__left {
-    max-width: 100%;
-  }
-}
+
 
 .loading-container {
   position: fixed;
@@ -157,7 +152,7 @@ button:hover .waviy {
 
 
 .section-container {
- 
+  
   width: 100%;
   margin: auto;   
 }
