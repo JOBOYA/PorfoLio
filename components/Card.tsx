@@ -9,8 +9,8 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
 
     
- 
-    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID as string);
+    const formKey = process.env.NEXT_PUBLIC_FORM_KEY!;
+    const [state, handleSubmit] = useForm(formKey);
         const [email, setEmail] = useState('');  // État pour l'email
         const [message, setMessage] = useState(''); // État pour le message
   

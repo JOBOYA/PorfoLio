@@ -3,7 +3,8 @@ import Yeti from "../components/Yeti";
 
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID as string);
+  const formKey = process.env.NEXT_PUBLIC_FORM_KEY!;
+  const [state, handleSubmit] = useForm(formKey);
 
   
     return (
