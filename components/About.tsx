@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <>
-    <div id="projects" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-20">
+    <div id="à propos" className="pl-4 md:pl-16 lg:pl-32 xl:pl-64 items-center m-20">
                     <h1 className="relative right-8 md:right-16 lg:right-24 xl:right-32 text-white text-4xl font-bold mb-4 md:mb-0 md:mr-4 title">
                         <span className="text-pink-500">#</span>A propos
                         <span className="line" style={{ position: 'absolute', left: '195px', bottom: '20px', height: '1px', width: '60%', backgroundColor: '#D946EF' }}></span>
