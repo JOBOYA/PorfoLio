@@ -48,43 +48,7 @@ const Projects = () => {
 
 
 
-                    <div>
-                                <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" >
-                                    <motion.div
-                                      whileHover={{ rotate: -10 }}
-                                      initial={{ opacity: 0 }}
-                                      animate={{ opacity: 1 }}
-                                     
-                                    >
-                                        <Link href="https://www.plumechat.com/" target="_blank">
-                                        <Card style={{ width: "300px", height: "300px" }} className="grid grid-rows-4 grid-flow-col gap-4 relative">
-                                            <div className="absolute top-0 right-0 p-2 z-10">
-                                                <Link href="https://github.com/JOBOYA" target="_blank">
-                                                    <AiFillGithub className="text-gray-500 hover:text-black text-2xl" />
-                                                </Link>
-                                            </div>
-                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
-                                                <span className="text-white text-sm">PlumeChat</span>
-                                                <div className="flex justify-center mt-1">
-                                                    <Image src="/media/tech/vercel.png" width={24} height={24} alt="nextjs" className="h-6 ml-2" />
-                                                    <Image src="/media/tech/typescript.png" width={24} height={24} alt="ts" className="h-6 ml-2" />
-                                                    <Image src="/media/tech/tailwind.png" width={24} height={24} alt="tailwind" className="h-6 ml-2" />
-                                                    <Image src="/media/tech/gpt.png" width={24} height={24} alt="openai" className="h-6 ml-2" />
-                                                    <Image src="/media/tech/prisma.png" width={24} height={24} alt="nodejs" className="h-6 ml-2" />
-                                                </div>
-                                            </div>
-
-                                            <div className="absolute w-full h-full">
-                                                <Image src="/assets/plume1.png" alt='git' layout="fill" objectFit="cover" className="z-0" />
-                                            </div>
-                                        </Card>
-                                        </Link>
-
-
-
-                                    </motion.div>
-                                </Grid>
-                            </div>
+                  
 
 
                     <div>
