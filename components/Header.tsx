@@ -51,9 +51,9 @@ const Header: React.FC<HeaderProps> = ({ text, imageUrl }) => {
   <span style={{ color: 'white', fontWeight: 'bold' }}>
                             <Typewriter
                                 words={[
-                                    "Élaguer un code, c'est tailler une branche sur l'arbre de Git.",
-                                    "Un commit supplémentaire, c'est une nouvelle épice dans le plat du code.",
-                                    "Une pull request, c'est le plat final prêt à être dégusté."
+                                    "Dans Git, élaguer le code c'est renforcer sa structure.",
+                                    "Chaque commit enrichit le code, tel un ingrédient clé.",
+                                    "Une pull request, c'est le signe d'un code prêt à l'emploi."
                                 ]}
                                 loop={5}
                                 cursor

@@ -47,7 +47,7 @@ const Projects = () => {
                     <Grid.Container justify="center"  alignItems="center" gap={8}   id="projects">
 
 
-
+                   
                   
 
 
@@ -89,6 +89,82 @@ const Projects = () => {
                                 
                             </div>
  
+
+                            <div>
+                                <Grid xs={24} md={8} lg={8} justify="center" alignItems="center">
+                                    <motion.div
+                                      whileHover={{ rotate: -10 }}
+                                      initial={{ opacity: 0 }}
+                                      animate={{ opacity: 1 }}
+                                     
+                                    >
+                                        <Link href="https://tracker-joboya.vercel.app/" target="_blank">
+                                        <Card style={{ width: "300px", height: "300px" }}  className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/JOBOYA/Tracker" target="_blank">
+                                                    <AiFillGithub className="text-gray-500 hover:text-black text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">V Expense Tracker</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/vuejs.png" width={24} height={24} alt="react" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/javascript.png" width={24} height={24} alt="ts" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/tailwind.png" width={24} height={24} alt="tailwind" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/supabase.png" width={24} height={24} alt="Api" className="h-6 ml-2" />
+                                                </div>
+                                            </div>
+
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/screen.png" alt='simulateur' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
+                                        </Card>
+                                        </Link>
+
+
+
+                                    </motion.div>
+                                </Grid>
+                                
+                            </div>
+
+                            <div>
+                                <Grid xs={24} md={8} lg={8} justify="center" alignItems="center">
+                                    <motion.div
+                                      whileHover={{ rotate: -10 }}
+                                      initial={{ opacity: 0 }}
+                                      animate={{ opacity: 1 }}
+                                     
+                                    >
+                                        <Link href="https://kaspa-watch.vercel.app/" target="_blank">
+                                        <Card style={{ width: "300px", height: "300px" }}  className="grid grid-rows-4 grid-flow-col gap-4 relative">
+                                            <div className="absolute top-0 right-0 p-2 z-10">
+                                                <Link href="https://github.com/JOBOYA/KaspaWatch" target="_blank">
+                                                    <AiFillGithub className="text-gray-500 hover:text-black text-2xl" />
+                                                </Link>
+                                            </div>
+                                            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 z-10">
+                                                <span className="text-white text-sm">KaspaWatch</span>
+                                                <div className="flex justify-center mt-1">
+                                                    <Image src="/media/tech/vercel.png" width={24} height={24} alt="react" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/typescript.png" width={24} height={24} alt="ts" className="h-6 ml-2" />
+                                                    <Image src="/media/tech/tailwind.png" width={24} height={24} alt="tailwind" className="h-6 ml-2" />
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div className="absolute w-full h-full">
+                                                <Image src="/assets/kaspa.png" alt='simulateur' layout="fill" objectFit="cover" className="z-0" />
+                                            </div>
+                                        </Card>
+                                        </Link>
+
+
+
+                                    </motion.div>
+                                </Grid>
+                                
+                            </div>
 
                            <div>
                                 <Grid xs={24} md={8} lg={8} justify="center" alignItems="center" >

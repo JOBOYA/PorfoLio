@@ -15,11 +15,6 @@ import Link from "next/link";
 import { Application } from '@splinetool/runtime';
 
 
-
-
-
-
-
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -29,10 +24,6 @@ export default function Home() {
 
 
   const canvasRef = useRef(null);
- 
-
-
-  
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
 
@@ -106,9 +97,6 @@ export default function Home() {
 
   return (
     <>
-  
-
-
       {isLoading ? (
         <div className="loading-container">
           <Loading style={{ textIndent: '-9999px' }}></Loading>
@@ -131,12 +119,10 @@ export default function Home() {
                   <Link href="https://www.linkedin.com/in/joseph-boyadjian-638b83255/" target="_blank">
                   <FaLinkedin className="text-white transition-transform hover:scale-125" size={30} />
                   </Link>
-                 
                   <div className="flex items-center">
                   <Link href="https://twitter.com/HOVSEPBOYA" target="_blank">
                     <FaTwitter className="text-white transition-transform hover:scale-125" size={30} />
                     </Link>
-                    
                   </div>
                 </div>
               </motion.div>
@@ -172,30 +158,11 @@ export default function Home() {
 
             
             </div>
-   
-           
-
 
   <Abouts />
-
-
-
   <Project />
-
-
-
   <Skills />
-
-
-
   <Contact />
-
-
-
-
-
-          
-          
         </>
       )}
     </>
